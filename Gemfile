@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.7'
+gem 'rails', '5.0.3'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
@@ -22,6 +22,25 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+gem 'rack-cors'
+
+# REST-like API framework for Ruby
+gem 'grape'
+gem 'grape-swagger'
+gem 'grape-swagger-rails'
+gem 'grape-active_model_serializers'
+gem 'grape-middleware-logger'
+
+# Use RSpec for specs
+gem 'rspec-rails', '>= 3.5.0'
+
+# Use Factory Girl for generating random test data
+gem 'factory_girl_rails'
+
+# gem library that generates fake data.
+gem 'faker'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
