@@ -23,6 +23,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# search for serializers for the objects returned by your grape API.
+gem 'grape-active_model_serializers'
+
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 
@@ -30,7 +33,6 @@ gem 'rack-cors'
 gem 'grape'
 gem 'grape-swagger'
 gem 'grape-swagger-rails'
-gem 'grape-active_model_serializers'
 gem 'grape-middleware-logger'
 
 # Use RSpec for specs
@@ -41,6 +43,9 @@ gem 'factory_girl_rails'
 
 # gem library that generates fake data.
 gem 'faker'
+
+# binding.pry debugger
+gem 'pry'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

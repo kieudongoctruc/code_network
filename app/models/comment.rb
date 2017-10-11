@@ -7,4 +7,6 @@ class Comment < ApplicationRecord
   validates :content, presence: true
   validates :creator_id, presence: true
   validates :post_id, presence: true
+
+  scope :all_comments_of_user_posts, ->(user) { where(post: user.posts) }
 end

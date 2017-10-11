@@ -24,13 +24,22 @@ module API
           end
         end
 
+        before { authenticate! }
+
         desc 'Get all posts from a specific user'
         params do
           requires :username, type: String, desc: 'Name which user chose to use in the system'
         end
         get ':id/posts' do
-          authenticate!
           user.posts
+        end
+
+        desc 'Get all comments from on all of a specific user\'s posts'
+        params do
+          requires :username, type: String, desc: 'Name which user chose to use in the system'
+        end
+        get 'posts/comments' do
+          Comment.all_comments_of_user_posts(current_user).order(:created_at)
         end
       end
 
