@@ -26,4 +26,5 @@ en:
     invalid_record: 'Invalid Record %{message}'
     no_space_in_username: 'Username may only contain alphanumeric characters or single hyphens, and cannot include space'
     username_existed: 'This username has been existed. Please choose another'
+    unauthorized: 'Unauthorized'
 

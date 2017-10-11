@@ -20,6 +20,10 @@ module API
           def current_user
             User.find_by(username: params[:username])
           end
+
+          def authenticate!
+            error!(I18n.t('error.unauthorized'), 401) unless current_user
+          end
         end
 
         rescue_from ActiveRecord::RecordNotFound do |e|
