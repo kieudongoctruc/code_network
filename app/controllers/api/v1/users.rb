@@ -23,11 +23,24 @@ module API
             User.create!(user_params)
           end
         end
+
+        desc 'Get all posts from a specific user'
+        params do
+          requires :username, type: String, desc: 'Name which user chose to use in the system'
+        end
+        get ':id/posts' do
+          authenticate!
+          user.posts
+        end
       end
 
       helpers do
         def user_params
           ActionController::Parameters.new(params).require(:user).permit(:username, :email, :password)
+        end
+
+        def user
+          @user ||= User.find(params[:id]) if params[:id].present?
         end
       end
     end
