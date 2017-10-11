@@ -7,7 +7,7 @@ module API
         desc 'Create a new user'
         params do
           requires :user, type: Hash do
-            requires :username, type: String, desc: 'Name which user choose to use in the system'
+            requires :username, type: String, desc: 'Name which user chose to use in the system'
             optional :email, type: String, regexp: User::EMAIL_REGEX, desc: 'user\'s email'
             optional :password, type: String, desc: 'User\'s password'
           end

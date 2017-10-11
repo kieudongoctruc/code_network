@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
   # == Model relationships
   has_many :posts, foreign_key: 'creator_id', dependent: :destroy
+  has_many :comments, foreign_key: 'creator_id', dependent: :destroy
 
   # == Validations
   validates :username, presence: true, uniqueness: true

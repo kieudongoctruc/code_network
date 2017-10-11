@@ -8,7 +8,7 @@ module API
 
         desc 'Create a new post'
         params do
-          requires :username, type: String, desc: 'Name which user choose to use in the system'
+          requires :username, type: String, desc: 'Name which user chose to use in the system'
           requires :content, type: String, desc: 'Post\'s content'
         end
         post do
