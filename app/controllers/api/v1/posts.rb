@@ -16,6 +16,14 @@ module API
             Post.create!(creator: current_user, content: params[:content])
           end
         end
+
+        desc 'Get all posts'
+        params do
+          requires :username, type: String, desc: 'Name which user chose to use in the system'
+        end
+        get do
+          Post.all
+        end
       end
     end
   end
