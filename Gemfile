@@ -38,9 +38,6 @@ gem 'grape-swagger-rails'
 # gem library that generates fake data.
 gem 'faker'
 
-# binding.pry debugger
-gem 'pry'
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -51,8 +48,14 @@ gem 'pry'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  # binding.pry debugger
+  gem 'pry'
+
+  # Adds step-by-step debugging and stack navigation capabilities to pry using byebug
+  gem 'pry-byebug'
+
+  # Use pry as the default console
+  gem 'pry-rails'
 
   # Use RSpec for specs
   gem 'rspec-rails', '>= 3.5.0'
