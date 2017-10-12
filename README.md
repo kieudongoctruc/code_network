@@ -40,3 +40,20 @@ Ruby on Rails backend API to serve for coders's social network application
     $ rails s
     ```
     **Note**: If you want to use webrick, you just need to prefix the command with the server name: `rails s webrick`
+
+    ```
+
+6. Test
+    Prepare the database for the test environment
+    ```sh
+    $ bundle exec rake db:test:prepare
+    ```
+    Run the tests
+    ```sh
+    $ rspec spec/ -f d -c
+    ```
+
+    1. run all examples in spec folder
+    2. `-f d` option will show the results in documentation format (group and example names)
+    3. `c` option will enable color in the output
+    4. You can see test coverage at coverage/index.html
