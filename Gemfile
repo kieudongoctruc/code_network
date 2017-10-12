@@ -31,15 +31,9 @@ gem 'rack-cors'
 
 # REST-like API framework for Ruby
 gem 'grape'
+gem 'grape-middleware-logger'
 gem 'grape-swagger'
 gem 'grape-swagger-rails'
-gem 'grape-middleware-logger'
-
-# Use RSpec for specs
-gem 'rspec-rails', '>= 3.5.0'
-
-# Use Factory Girl for generating random test data
-gem 'factory_girl_rails'
 
 # gem library that generates fake data.
 gem 'faker'
@@ -59,6 +53,12 @@ gem 'pry'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  # Use RSpec for specs
+  gem 'rspec-rails', '>= 3.5.0'
+
+  # Use Factory Girl for generating random test data
+  gem 'factory_girl_rails'
 end
 
 group :development do
@@ -68,4 +68,3 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
